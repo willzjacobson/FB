@@ -1,0 +1,31 @@
+{
+  "name": "fb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willzjacobson/FB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willzjacobson/FB/issues"
+  },
+  "homepage": "https://github.com/willzjacobson/FB#readme",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "bluebird": "^3.1.1",
+    "body-parser": "^1.14.2",
+    "chalk": "^1.1.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "jquery": "^2.2.0",
+    "mongoose": "^4.3.5",
+    "nodemon": "^1.8.1"
+  }
+}
