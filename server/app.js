@@ -2,10 +2,11 @@ var express = require('express');
 var app = express();
 var cors = require('cors');
 var bodyParser = require('body-parser');
+var chalk = require('chalk');
 
 var server = require('http').createServer();
 server.listen(3001, function() {
-	console.log('estamos oyendo en el puerto 3001');
+	console.log(chalk.magenta('estamos oyendo en el puerto 3001'));
 });
 
 // parse application/x-www-form-urlencoded
