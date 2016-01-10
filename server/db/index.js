@@ -1,12 +1,11 @@
 'use strict';
 
-var Promise = require('bluebird');
 var chalk = require('chalk');
+var Promise = require('bluebird');
 var mongoose = require('mongoose');
-Promise.promisify('bluebird');
+Promise.promisifyAll(mongoose);
 
-mongoose.connect('mongodb://localhost/fb');
-var db = mongoose.connection;
+var db = mongoose.connect('mongodb://localhost/fb').connection;
 
 require('./models');
 
@@ -16,8 +15,10 @@ var startDbPromise = new Promise(function(resolve, reject) {
 });
 
 console.log(chalk.yellow('Attempting to open database...'));
-startDbPromise().then(function() {
+startDbPromise.then(function() {
 	console.log(chalk.green('Database connection opened!'));
+}, function(err) {
+	console.log(chalk.red('database error:', err.message));
 });
 
 module.exports = startDbPromise;
