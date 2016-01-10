@@ -1,17 +1,18 @@
-var Schema = require('mongoose').Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
 var schema = new Schema({
-	updated: {
+	posted: {
 		type: Date,
 		default: Date.now
 	},
 	to: {
-		type: Mongoose.Types.ObjectId,
-		ref: User
+		type: Schema.Types.ObjectId,
+		ref: mongoose.model('User')
 	},
 	from: {
-		type: Mongoose.Types.ObjectId,
-		ref: User
+		type: Schema.Types.ObjectId,
+		ref: mongoose.model('User')
 	},
 	text: {
 		type: String,
