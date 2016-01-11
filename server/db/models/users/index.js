@@ -2,6 +2,12 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var schema = new Schema({
+	userName: {
+		type: String,
+		unique: true
+	},
+	password: String,
+	salt: String,
 	first: {
 		type: String,
 		required: true
@@ -10,6 +16,8 @@ var schema = new Schema({
 		type: String,
 		required: true
 	},
+	semiPrivateInfo: String,
+	privateInfo: String,
 	gender: {
 		type: String,
 		enum: ['male', 'female', 'other'],
@@ -36,6 +44,3 @@ schema.virtual('full').get(function() {
 
 schema.set('toJSON', { virtuals: true });
 var User = mongoose.model('User', schema);
-// 1;: 5691d8800f0cf7203286fa16
-// 2: 5691d8990dcab6253209a7c4
-// 3: 5691d8a70dcab6253209a7c5

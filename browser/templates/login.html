@@ -1,0 +1,12 @@
+<h4>Login</h4>
+<form ng-submit="sendLoginInfo(userData)">
+	<div class="form-group">
+		<label for="theUserName">Username</label>
+		<input id="theUserName" type="text" class="form-control" ng-model="userData.userName">
+	</div>
+	<div class="form-group">
+		<label for="thePassword">Password</label>
+		<input id="thePassword" type="text" class="form-control" ng-model="userData.password">
+	</div>
+	<button class="btn btn-lg btn-success" type="submit">Login</button>
+</form>

@@ -1,0 +1,39 @@
+<h4>Login</h4>
+<form ng-submit="sendSignupInfo(userData)">
+
+	<div class="form-group">
+		<label for="theUserName">Username</label>
+		<input id="theUserName" type="text" class="form-control" ng-model="userData.userName">
+	</div>
+	<div class="form-group">
+		<label for="thePassword">Password</label>
+		<input id="thePassword" type="text" class="form-control" ng-model="userData.password">
+	</div>
+	<div class="form-group">
+		<label for="thePassword">First Name</label>
+		<input id="thePassword" type="text" class="form-control" ng-model="userData.first">
+	</div>
+	<div class="form-group">
+		<label for="thePassword">Last Name</label>
+		<input id="thePassword" type="text" class="form-control" ng-model="userData.last">
+	</div>
+
+	<input type="radio" ng-model="userData.gender" value="male" name> Male
+	<input type="radio" ng-model="userData.gender" value="female" name> Female
+	<input type="radio" ng-model="userData.gender" value="other" name> Other
+
+	<div class="form-group">
+		<label for="semiPrivate">Semi Private</label>
+		<textarea id="semiPrivate" ng-model="userData.semiPrivateInfo"></textarea>
+	</div>
+	<div class="form-group">
+		<label for="private">Private</label>
+		<textarea id="semiPrivate" ng-model="userData.privateInfo"></textarea>
+	</div>
+	<div class="form-group">
+		<label for="hobbies">Hobbies</label>
+		<textarea id="semiPrivate" ng-model="userData.hobbies"></textarea>
+	</div>
+
+	<button class="btn btn-lg btn-success" type="submit">Signup</button>
+</form>

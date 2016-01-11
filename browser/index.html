@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Social</title>
+	<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/styles.css">
+
+	<script type="text/javascript" src="/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/jquery-ui/jquery-ui.js"></script>
+	<script type="text/javascript" src="/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+	<script type="text/javascript" src="/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<script type="text/javascript" src="/app.js"></script>
+
+	<script type="text/javascript" src="/factories/auth-factory.js"></script>
+	<script type="text/javascript" src="/factories/post-factory.js"></script>
+	<script type="text/javascript" src="/factories/user-factory.js"></script>
+
+	<script type="text/javascript" src="/directives/navbar.js"></script>
+
+	<script type="text/javascript" src="/states/home-state.js"></script>
+	<script type="text/javascript" src="/states/login-state.js"></script>
+	<script type="text/javascript" src="/states/signup-state.js"></script>
+	<script type="text/javascript" src="/states/profile-state.js"></script>
+	<script type="text/javascript" src="/states/users-state.js"></script>
+
+
+</head>
+<body ng-app="FBClone">
+	<navbar></navbar>
+	<ui-view></ui-view>
+</body>
+</html>
