@@ -19,7 +19,7 @@ router.post('/', function(req, res, next) {
 });
 
 router.param('userId', function(req, res, next, id) {
-	User.findById(id)
+	User.findById(id).populate('desiredFriends')
 	.then(function(user) {
 		if (!user) throw new Error('User not found.');
 		req.requestedUser = user;

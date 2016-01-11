@@ -1,0 +1,8 @@
+<div>
+	<button ng-show="!isLoggedIn()" ui-sref="login" class="btn btn-lg btn-info">Login</button>
+	<button ng-show="!isLoggedIn()" ui-sref="signup" class="btn btn-lg btn-info">Signup</button>
+	<button ng-show="isLoggedIn()" ng-click="logout()" class="btn btn-lg btn-info">Logout</button>
+	<button ng-show="isLoggedIn()" ui-sref="profile({userId:getCurrentUser()._id})" class="btn btn-lg btn-info">Profile</button>
+	<button ng-show="isLoggedIn()" ui-sref="users" class="btn btn-lg btn-info">Shop Friends</button>
+	<button ng-show="isLoggedIn()" ui-sref="users({userId:getCurrentUser()._id})" class="btn btn-lg btn-info">Shop Friends</button>
+</div>

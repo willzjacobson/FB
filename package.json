@@ -19,12 +19,17 @@
   "homepage": "https://github.com/willzjacobson/FB#readme",
   "dependencies": {
     "angular": "^1.4.8",
+    "angular-ui-bootstrap": "^1.0.0",
+    "angular-ui-router": "^0.2.15",
     "bluebird": "^3.1.1",
     "body-parser": "^1.14.2",
+    "bootstrap": "^3.3.6",
     "chalk": "^1.1.1",
     "cors": "^2.7.1",
     "express": "^4.13.3",
+    "express-session": "^1.12.1",
     "jquery": "^2.2.0",
+    "jquery-ui": "^1.10.5",
     "mongoose": "^4.3.5",
     "nodemon": "^1.8.1"
   }

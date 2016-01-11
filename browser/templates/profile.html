@@ -1,0 +1,17 @@
+<div class="container">
+<h2>{{user.first}} {{user.last}}'s Profile</h2>
+
+<p>{{user.semiPrivate}}</p>
+
+<p>{{user.semiPrivateInfo}}</p>
+
+<p ng-show="me._id === user._id">{{user.privateInfo}}</p>
+
+<p>{{user.semiPrivate}}</p>
+
+<button class="btn btn-info" ui-sref="profile.friends">Friends</button>
+<button class="btn btn-info" ui-sref="profile.hobbies">Hobbies</button>
+
+<ui-view></ui-view>
+
+</div><!-- .container -->
