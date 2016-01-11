@@ -5,7 +5,7 @@
 
 <p>{{user.semiPrivateInfo}}</p>
 
-<p>{{user.privateInfo}}</p>
+<p ng-show="me._id === user._id">{{user.privateInfo}}</p>
 
 <p>{{user.semiPrivate}}</p>
 

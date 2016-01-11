@@ -11,8 +11,9 @@ app.config(function($stateProvider) {
 	});
 });
 
-app.controller('ProfileCtrl', function($scope, user) {
+app.controller('ProfileCtrl', function($scope, user, AuthFactory) {
 
+	$scope.me = AuthFactory.getCurrentUser();
 	$scope.user = user;
-
+console.log(user);
 });

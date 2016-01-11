@@ -12,7 +12,10 @@ app.factory('FriendFactory', function($http) {
 	};
 
 	toReturn.requestFriend = function(userId, friendId) {
-		$http.put('/api/users/' + userId + '/request/' + friendId);
+		return $http.put('/api/users/' + userId + '/request/' + friendId)
+		.then(function(res) {
+			return res.data;
+		});
 	};
 
 	toReturn.confirmFriend = function(userId, friendId) {
