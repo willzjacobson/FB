@@ -1,18 +1,3 @@
 <h2>All Users</h2>
 
-<div class="container">
-
-	<form>
-		<div class="form-group">
-			<label for="desired">Search Users</label>
-			<input id="desired" class="form-control" type="text" ng-model="desired.full">
-		</div>
-	</form>
-
-	<div ng-show="user._id !== me._id" ng-repeat="user in users | filter: desired"> 
-		<span>{{user.full}}</span>
-		<button ng-show="isFriend(user._id)" ui-sref="profile({userId: user._id})" class="btn btn-danger">View Profile</button>
-		<button ng-show="!isFriend(user._id)" ng-click="requestFriend(me._id, user._id)" class="btn btn-success">Add Friend</button>
-	</div>
-
-</div>
+<user-list users="users"></user-list>
